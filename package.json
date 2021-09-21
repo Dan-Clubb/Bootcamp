@@ -1,0 +1,23 @@
+{
+  "name": "Bootcamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanClubb/Bootcamp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanClubb/Bootcamp/issues"
+  },
+  "homepage": "https://github.com/DanClubb/Bootcamp#readme",
+  "devDependencies": {
+    "jest": "^27.2.0"
+  }
+}

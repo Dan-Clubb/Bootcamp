@@ -48,10 +48,10 @@ let carol = {
 };
 let daniel = {
     name: 'Daniel',
-    parents: [alan, carol],
+    parents: ['alan', 'carol'],
     printParents: function (){
-        console.log(this.parents[0].name);
-        console.log(this.parents[1].name);
+        console.log(this.parents[0]);
+        console.log(this.parents[1]);
     },
 };
 let lousie = {
@@ -70,4 +70,4 @@ carol.printParents();
 alansDad.printParents()
 console.log(alansMum.name);
 
-
+module.exports = daniel;
