@@ -13,10 +13,12 @@ app.get("/companies", async (req, res) => {
     const companies = await Company.findAll();
     res.json(companies);
 });
+
 app.get("/companies/:id", async (req, res) => {
     const companies = await Company.findByPk(req.params.id);
     res.json(companies);
 });
+
 app.get("/companies/:id/menus", async (req, res) => {
     const companies = await Menu.findAll({
         where: {
@@ -25,6 +27,7 @@ app.get("/companies/:id/menus", async (req, res) => {
     });
     res.json(companies);
 });
+
 app.post("/companies", async (req, res) => {
     const newCompany = Company.create({
         name: req.body.name,
@@ -32,15 +35,18 @@ app.post("/companies", async (req, res) => {
         });
         res.send("new company created");
 });
+
 app.delete("/companies/:id", async (req, res) => {
     const company = await Company.findByPk(req.params.id);
     company.destroy();
     res.send(`${company.name} deleted`);
 });
+
 app.get("/menus/:id", async (req, res) => {
     const menu = await Menu.findByPk(req.params.id);
     res.json(menu);
 });
+
 app.put("/companies/:id", async (req, res) => {
     const company = await Company.findByPk(req.params.id);
     if (!company) {
@@ -49,6 +55,7 @@ app.put("/companies/:id", async (req, res) => {
     await company.update(req.body);
     res.send('company updated');
 });
+
 app.post("companies/:id/menus", async (req, res) => {
     const company = req.params.id;
     await company.createMenu({

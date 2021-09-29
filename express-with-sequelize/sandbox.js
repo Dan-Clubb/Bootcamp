@@ -15,6 +15,7 @@ async function sandbox() {
         name: "KFC",
         logoURL: "www.KFClogo.com",
     });
+
     const mcdDrinks = await mcDonalds.createMenu({
         title: "mcDonalds drinks",
     });
@@ -24,6 +25,7 @@ async function sandbox() {
     const kfcDrinks = await kfc.createMenu({
         title: "KFC drinks",
     });
+    
     const mcdRuislip = await mcDonalds.createLocation({
         name: "Ruislip",
         capacity: 80,
